@@ -2,7 +2,7 @@
 
 数据结构:
 - 数组
-- 链表
+- [链表](https://github.com/fxbabys/Algorithm-JS/tree/master/LinkedList)
 - 队列
 - 散列表
 - 二叉树
