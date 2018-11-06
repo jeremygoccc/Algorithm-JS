@@ -30,6 +30,10 @@
     return value
   }
 
+  clear () {
+    this.top = null
+  }
+
   display () {
     if (this.top === null) return
     let temp = this.top
@@ -41,9 +45,11 @@
  }
 
 const stack = new Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-console.log('----display----')
-stack.display()
-console.log('---------------')
+// stack.push(1)
+// stack.push(2)
+// stack.push(3)
+// console.log('----display----')
+// stack.display()
+// console.log('---------------')
+
+exports.createStack = Stack
