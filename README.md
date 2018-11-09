@@ -3,7 +3,7 @@
 数据结构:
 - 数组
 - [链表](https://github.com/fxbabys/Algorithm-JS/tree/master/LinkedList)
-- 队列
+- [队列](https://github.com/fxbabys/Algorithm-JS/tree/master/Queue)
 - 散列表
 - 二叉树
 - 堆
