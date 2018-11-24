@@ -65,7 +65,7 @@ class LinkedList {
   }
 
   // 单链表反转
-  // 思路: 头插法遍历原链表, 尾插法生成新链表
+  // 思路: 从头至尾遍历原链表, 尾插法生成新链表
   revertList () {
     const newList = new Node('head')
     let currentNode = this.head.next
@@ -77,6 +77,25 @@ class LinkedList {
     }
     this.head = newList
   }
+  // 直接反转
+  revertListDirectly () {
+    if (!this.head.next || !this.head.next.next) return this.head
+    // 第一个结点反转为尾部结点
+    let prev = null
+    let current = this.head.next
+    let next
+    // 先保存下一结点
+    // 将当前结点的 next 设为上一结点
+    // prev 设为当前结点, current 设为下一结点
+    while (current) {
+      next = current.next
+      current.next = prev
+      prev = current
+      current = next
+    }
+    this.head.next = prev
+  }
+
   // 链表中环的检测
   // 初始思路: 一个结点在头, 一个结点一直遍历, 相等即为环(错误: 链表中存在环不等于是一个环链表)
   // 正确思路: 一个结点走快点, 另一个结点走慢点, 相遇即含环(相遇点是环的入口?)
@@ -175,6 +194,10 @@ sortedList.display()
 console.log('-----------------')
 sortedList.revertList()
 console.log('-----After Revert-----')
+sortedList.display()
+console.log('-----------------')
+sortedList.revertListDirectly()
+console.log('-----After Revert2-----')
 sortedList.display()
 console.log('----------------------')
 const sortedList1 = new LinkedList()
