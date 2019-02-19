@@ -87,8 +87,26 @@ class BST {
     if (node.value > v) {
       return this._floor(node.left, v)
     }
-    if (node.right) return _this.floor(node.right, v)
+    let right = this._floor(node.right, v)
+    if (right) return right
     return node
+  }
+  // 验证 BST
+  // 非递归中序遍历
+  isValidBST () {
+    let p = this.root, current = null
+    let stack = []
+    while (p !== null || stack.length > 0) {
+      while (p !== null) {
+        stack.push(p)
+        p = p.left;
+      }
+      p = stack.pop()
+      if (current !== null && p.val <= current.val) return false
+      current = p
+      p = p.right
+    }
+    return true
   }
 }
 
@@ -113,3 +131,10 @@ console.log('---------------')
 console.log('---- 最大值 ----')
 console.log(bst.getMax())
 console.log('---------------')
+console.log('---- 向 2.6 下取整 ----')
+console.log(bst.floor(2.6))
+console.log('---------------')
+console.log('---- 验证 BST ----')
+console.log(bst.isValidBST())
+console.log('---------------')
+
