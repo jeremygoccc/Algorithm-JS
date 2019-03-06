@@ -5,11 +5,11 @@
 - [链表](https://github.com/fxbabys/Algorithm-JS/tree/master/LinkedList)
 - [队列](https://github.com/fxbabys/Algorithm-JS/tree/master/Queue)
 - 散列表
-- 二叉树
-- 堆
+- [二叉树](https://github.com/fxbabys/Algorithm-JS/tree/master/Tree?1551165323647)
+- [堆](https://github.com/fxbabys/Algorithm-JS/blob/master/Sorts/heapSort.js)
 - 跳表
 - 图
-- Trie树
+- [Trie树](https://github.com/fxbabys/Algorithm-JS/blob/master/Tree/Trie.js)
 
 算法:
 - [递归](https://zh.wikipedia.org/wiki/%E9%80%92%E5%BD%92)
@@ -20,5 +20,8 @@
 - 贪心算法
 - 分治算法
 - 回溯算法
-- 动态规划
+- [动态规划](https://github.com/fxbabys/Algorithm-JS/tree/master/DynamicPlanning)
 - 字符串匹配算法
+ 
+ 
+[我的刷题](https://github.com/fxbabys/Algorithm-JS/tree/master/Answers)
