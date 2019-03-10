@@ -12,5 +12,5 @@ const isSubtreeWithRoot = (s, t) => {
   if (s === null && t === null) return true
   if (s === null || t === null) return false
   if (t.val !== s.val) return false
-  return isSubtreeWithRoot(s.left, t.left) && isSubtreeWithRoot(s.left, t.left)
+  return isSubtreeWithRoot(s.left, t.left) && isSubtreeWithRoot(s.right, t.right)
 }
