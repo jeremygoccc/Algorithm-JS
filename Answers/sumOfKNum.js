@@ -14,10 +14,10 @@ const sumOfKNum = (m, n) => {
     }
     if (flag) console.log(n)
   }
-  arr.unshift(n)
+  arr.unshift(n) // 取n
   sumOfKNum(m - n, n - 1)
-  arr.shift()
+  arr.shift() // 不取n
   sumOfKNum(m, n - 1)
 }
 
-console.log(sumOfKNum(5, 5))
+console.log(sumOfKNum(4, 5))
