@@ -224,3 +224,4 @@ console.log('-----Find the MiddleNode-----')
 console.log(sortedList3.findMiddleNode())
 console.log('-----------------------------------')
 
+exports.LinkedList = LinkedList
