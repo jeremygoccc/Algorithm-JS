@@ -91,6 +91,34 @@ class BST {
     if (right) return right
     return node
   }
+  // 非递归前序遍历
+  preDisplay() {
+    let p = this.root, stack = []
+    while (p !== null || stack.length > 0) {
+      if (p !== null) {
+        console.log(p.value)
+        stack.push(p)
+        p = p.left
+      } else {
+        p = stack.pop()
+        p = p.right
+      }
+    }
+  }
+  // 非递归中序遍历
+  midDisplay() {
+    let p = this.root, stack = []
+    while (p !== null || stack.length > 0) {
+      if (p !== null) {
+        stack.push(p)
+        p = p.left
+      } else {
+        p = stack.pop()
+        console.log(p.value)
+        p = p.right
+      }
+    }
+  }
   // 验证 BST
   // 非递归中序遍历
   isValidBST () {
@@ -118,9 +146,11 @@ bst.addNode(4)
 bst.addNode(5)
 console.log('--- 前序遍历 ---')
 bst.preTraversal()
+bst.preDisplay()
 console.log('---------------')
 console.log('--- 中序遍历 ---')
 bst.midTraversal()
+bst.midDisplay()
 console.log('---------------')
 console.log('--- 后序遍历 ---')
 bst.postTraversal()
