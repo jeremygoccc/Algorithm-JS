@@ -24,3 +24,18 @@ function isPowerOfTwo (n) {
 }
 
 console.log(isPowerOfTwo(11))
+
+/**
+ * 给定一个从零开始的乱序连续数组，找出缺失的那个数字
+ * 最简单的思路是利用数学公式，计算数组的和再用 1-N 的值减去这个和
+ * 思路: ret ^ i ^ nums[i]，余下最大值与缺失的值的异或，再与最大值（数组的长度）进行一次异或
+ */
+function missingNumber(nums) {
+  let ret = 0, len = nums.length
+  for (let i = 0; i < len; i++) {
+    ret = ret ^ i ^ nums[i]
+  }
+  return ret ^ len
+}
+
+console.log(missingNumber([0, 5, 3, 4, 1]))
