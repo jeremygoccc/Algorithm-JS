@@ -17,7 +17,7 @@
 - [二分查找](https://github.com/fxbabys/Algorithm-JS/tree/master/BinaryFind)
 - 搜索
 - 哈希算法
-- 贪心算法
+- [贪心算法](https://github.com/fxbabys/Algorithm-JS/tree/master/Greedy)
 - 分治算法
 - 回溯算法
 - [动态规划](https://github.com/fxbabys/Algorithm-JS/tree/master/DynamicPlanning)
